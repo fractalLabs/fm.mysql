@@ -1,6 +1,6 @@
 (ns mysql.mysql
   (:use
-    [clojure.contrib.sql
+    [java.jdbc
      :only
      [create-table insert-values with-connection with-query-results]]
     [clojure.string :only [replace] :as st]))
