@@ -1,9 +1,9 @@
-(ns mysql.mysql
+(ns fm.mysql
   (:use
-    [java.jdbc
+    [clojure.java.jdbc
      :only
-     [create-table insert-values with-connection with-query-results]]
-    [clojure.string :only [replace] :as st]))
+     [create-table insert-values with-connection with-query-results]])
+  (:require  [clojure.string :only [replace] :as st]))
 
 
 (def *db-host* "host")
@@ -66,7 +66,7 @@
   (apply str (interpose 
                " and "
                (for [i mapa]
-                 (str "`" (as-str (key->sql (first i))) "`" " = " (if (string? (second i)) (str "'" (second i) "'") (second i)))))))
+                 (str "`" (name (key->sql (key i))) "`" " = " (if (string? (val i)) (str "'" (val i) "'") (val i)))))))
 
 (defn select*
   "crea una query para seleccionar elementos de table que cumplan
