@@ -1,4 +1,4 @@
-(defproject mysql "1.0.0-SNAPSHOT"
+(defproject fm.mysql "1.0.0-SNAPSHOT"
             :main fm.mysql
   :description "Fns para trabajar mejor con mysql"
   :dependencies [[org.clojure/clojure "1.4.0"]
