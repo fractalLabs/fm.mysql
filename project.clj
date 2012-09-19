@@ -2,4 +2,4 @@
             :main fm.mysql
   :description "Fns para trabajar mejor con mysql"
   :dependencies [[org.clojure/clojure "1.2.1"] 
-                 [mysql-java "5.1.21"]])
+                 [mysql/mysql-connector-java "5.1.21"]])
